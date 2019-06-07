@@ -10,6 +10,8 @@ const service = new ecs.FargateService("service", {
         containers: {
             service: {
                 image: ecs.Image.fromPath("image", "../"),
+                cpu: 102,
+                memory: 50,
                 portMappings: [
                     networkListener
                 ]
